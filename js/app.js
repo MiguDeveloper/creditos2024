@@ -19,7 +19,6 @@ $(document).ready(function () {
     messages: initMessages(),
     submitHandler: function (form, event) {
       event.preventDefault();
-      console.log("...enviando formulario ok");
       const data = $("#frmRegistro").serializeArray();
       console.log(data);
       Swal.fire({
@@ -36,6 +35,32 @@ $(document).ready(function () {
       console.log("fomulario invalido: campos requeridos");
       event.preventDefault();
     },
+  });
+
+  $(".showmodalTerms").click(function (evt) {
+    Swal.fire({
+      title: TITULO_TERMINOS,
+      html: TERMINOSCONDICIONES,
+      confirmButtonText: "Aceptar",
+      customClass: {
+        title: "title--color-secondary",
+        confirmButton: "btn-submit btn-submit--confirm",
+      },
+      buttonsStyling: false,
+    });
+  });
+
+  $(".showModalPolitics").click(function (evt) {
+    Swal.fire({
+      title: TITULO_POLITICAS,
+      html: POLITICASDATOS,
+      confirmButtonText: "Aceptar",
+      customClass: {
+        title: "title--color-secondary",
+        confirmButton: "btn-submit btn-submit--confirm",
+      },
+      buttonsStyling: false,
+    });
   });
 });
 

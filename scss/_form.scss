@@ -11,9 +11,36 @@
   max-width: 200px !important;
   padding: 7px 0;
   font-weight: bold;
+  position: relative;
+  transition: 0.5s;
 
   &--confirm {
     padding: 7px 2rem;
+    opacity: 0.8;
+
+    &:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+  &--hover:after {
+    //content: "»";
+    content: "🚀";
+    position: absolute;
+    opacity: 0;
+    top: 6px;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  &--hover:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+  }
+
+  &--hover:hover:after {
+    opacity: 1;
+    right: 16px;
   }
 }
 
@@ -25,4 +52,9 @@ select.form-select {
   text-align: justify;
   font-size: 11px;
   margin-bottom: 0;
+
+  & a {
+    color: var(--color-secondary);
+    cursor: pointer;
+  }
 }
