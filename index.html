@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -46,7 +46,7 @@
         </div>
 
         <div
-          class="col-sm-12 order-sm-2 col-md-6 order-md-1 col-lg-4 order-md-1"
+          class="col-sm-12 order-sm-2 col-md-6 order-md-1 col-lg-4 order-md-1 d-flex flex-column align-items-center"
         >
           <div class="mb-3 mt-4 d-flex">
             <img
@@ -69,48 +69,18 @@
               />
             </div>
 
-            <div class="row mb-2">
+            <div class="row mb-2 pb-2">
               <div class="col-6 col-lg-12 col-xl-6">
-                <label for="edad" class="form-label form-label--xs"
-                  >Edad*</label
+                <label for="dni" class="form-label form-label--xs"
+                  >N° de DNI*</label
                 >
-                <select
-                  class="form-select"
-                  id="edad"
-                  name="edad"
-                  aria-label="seleccione edad"
-                >
-                  <option value="">seleccione</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                  <option value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                  <option value="25">25</option>
-                  <option value="26">26</option>
-                  <option value="27">27</option>
-                  <option value="28">28</option>
-                  <option value="29">29</option>
-                  <option value="30">30</option>
-                  <option value="31">31</option>
-                  <option value="32">32</option>
-                  <option value="33">33</option>
-                  <option value="34">34</option>
-                  <option value="35">35</option>
-                  <option value="36">36</option>
-                  <option value="37">37</option>
-                  <option value="38">38</option>
-                  <option value="39">39</option>
-                  <option value="40">40</option>
-                  <option value="41">41</option>
-                  <option value="42">42</option>
-                  <option value="43">43</option>
-                  <option value="44">44</option>
-                  <option value="45">45</option>
-                </select>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="dni"
+                  name="dni"
+                  placeholder="Nro. de DNI"
+                />
               </div>
               <div class="col-6 col-lg-12 col-xl-6">
                 <label for="fNacimiento" class="form-label form-label--xs"
@@ -126,191 +96,194 @@
               </div>
             </div>
 
-            <div class="mb-2">
-              <label for="email" class="form-label form-label--xs"
-                >Correo electrónico*</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                name="email"
-                placeholder="correo electrónico"
-              />
-            </div>
-
-            <div class="mb-2">
-              <label for="si" class="form-label form-label--xs"
-                >Anteriormente, ¿Ha contado con un crédito educativo por
-                IPFE?*</label
-              >
-              <div>
-                <label class="form-check-label" for="si"
-                  ><input
-                    class="form-check-input"
-                    type="radio"
-                    name="tieneCreditoAnterior"
-                    id="si"
-                    value="si"
-                  />
-                  Si</label
+            <div id="show-allow">
+              <div class="mb-2">
+                <label for="email" class="form-label form-label--xs"
+                  >Correo electrónico*</label
                 >
-
-                <label class="form-check-label" for="no"
-                  ><input
-                    class="form-check-input"
-                    type="radio"
-                    name="tieneCreditoAnterior"
-                    id="no"
-                    value="no"
-                  />
-                  No</label
-                >
-              </div>
-            </div>
-
-            <div class="mb-2">
-              <label for="nivelAcademico" class="form-label form-label--xs"
-                >Nivel académico*</label
-              >
-              <select
-                class="form-select"
-                id="nivelAcademico"
-                name="nivelAcademico"
-                aria-label="seleccione nivel"
-              >
-                <option value="">Seleccione</option>
-                <option value="Técnico">Técnico</option>
-                <option value="Universitario">Universitario</option>
-              </select>
-            </div>
-
-            <div class="mb-2">
-              <label
-                for="institucionEducativa"
-                class="form-label form-label--xs"
-                >Institución educativa*</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="institucionEducativa"
-                name="institucionEducativa"
-                placeholder="institución educativa"
-              />
-            </div>
-
-            <div class="mb-2">
-              <label for="carrera" class="form-label form-label--xs"
-                >Carrera*</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="carrera"
-                name="carrera"
-                placeholder="carrera"
-              />
-            </div>
-
-            <div class="mb-2">
-              <label for="cicloAContinuar" class="form-label form-label--xs"
-                >Ciclo de estudios a continuar*</label
-              >
-              <select
-                class="form-select"
-                id="cicloAContinuar"
-                name="cicloAContinuar"
-                aria-label="seleccione ciclo"
-              >
-                <option value="">Seleccione</option>
-                <option value="4 ciclo">4 ciclo</option>
-                <option value="5 ciclo">5 ciclo</option>
-                <option value="6 ciclo">6 ciclo</option>
-                <option value="7 ciclo">7 ciclo</option>
-                <option value="8 ciclo">8 ciclo</option>
-                <option value="9 ciclo">9 ciclo</option>
-                <option value="10 ciclo">10 ciclo</option>
-              </select>
-            </div>
-
-            <div class="mb-2">
-              <label for="monto" class="form-label form-label--xs"
-                >Importe del crédito (Colocar monto en números)*</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="monto"
-                name="monto"
-                placeholder="monto"
-              />
-            </div>
-
-            <div class="mb-2">
-              <label for="comoSeEntero" class="form-label form-label--xs"
-                >¿Cómo se entero del programa?*</label
-              >
-              <select
-                class="form-select"
-                id="comoSeEntero"
-                name="comoSeEntero"
-                aria-label="seleccione ciclo"
-              >
-                <option value="">Seleccione</option>
-                <option value="Facebook">Facebook</option>
-                <option value="Instagram">Instagram</option>
-                <option value="LinkedIn">LinkedIn</option>
-                <option value="Referencia (familia o amigos)">
-                  Referencia (familia o amigos)
-                </option>
-                <option value="Instituto">Instituto</option>
-                <option value="Universidad">Universidad</option>
-                <option value="Página web">Página web</option>
-                <option value="otros">Otros</option>
-              </select>
-            </div>
-            <div class="mb-2" id="showOtro">
-              <label for="otros" class="form-label form-label--xs"
-                >Indique el medio*</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="otros"
-                name="otros"
-                placeholder="Indique el medio"
-              />
-            </div>
-            <div class="mb-2 d-flex gap-3 align-items-center">
-              <div class="form-check form-switch">
                 <input
-                  class="form-check-input"
-                  role="switch"
-                  type="checkbox"
-                  name="terminos"
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="correo electrónico"
                 />
               </div>
-              <div>
-                <p class="formgroup__terms">
-                  Si, he leído y presto mi consentimiento a los
-                  <a class="showmodalTerms"
-                    >Términos y condiciones del Programa de créditos educativos
-                    Continuidad de Estudios</a
+
+              <div class="mb-2">
+                <label for="si" class="form-label form-label--xs"
+                  >Anteriormente, ¿Ha contado con un crédito educativo por
+                  IPFE?*</label
+                >
+                <div>
+                  <label class="form-check-label" for="si"
+                    ><input
+                      class="form-check-input"
+                      type="radio"
+                      name="tieneCreditoAnterior"
+                      id="si"
+                      value="si"
+                    />
+                    Si</label
                   >
-                  y al procesamiento, al tratamiento y a la transferencia de mis
-                  datos personales conforme a lo dispuesto en la
-                  <a class="showModalPolitics"
-                    >Política de tratamiento de datos personales del Programa de
-                    créditos educativos Continuidad de Estudios</a
-                  >.
-                </p>
+
+                  <label class="form-check-label" for="no"
+                    ><input
+                      class="form-check-input"
+                      type="radio"
+                      name="tieneCreditoAnterior"
+                      id="no"
+                      value="no"
+                    />
+                    No</label
+                  >
+                </div>
+              </div>
+
+              <div class="mb-2">
+                <label for="nivelAcademico" class="form-label form-label--xs"
+                  >Nivel académico para el que requerie el crédito*</label
+                >
+                <select
+                  class="form-select"
+                  id="nivelAcademico"
+                  name="nivelAcademico"
+                  aria-label="seleccione nivel"
+                >
+                  <option value="">Seleccione</option>
+                  <option value="Técnico">Técnico</option>
+                  <option value="Universitario">Universitario</option>
+                </select>
+              </div>
+
+              <div class="mb-2">
+                <label
+                  for="institucionEducativa"
+                  class="form-label form-label--xs"
+                  >Institución educativa*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="institucionEducativa"
+                  name="institucionEducativa"
+                  placeholder="institución educativa"
+                />
+              </div>
+
+              <div class="mb-2">
+                <label for="carrera" class="form-label form-label--xs"
+                  >Carrera*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="carrera"
+                  name="carrera"
+                  placeholder="carrera"
+                />
+              </div>
+
+              <div class="mb-2">
+                <label for="cicloAContinuar" class="form-label form-label--xs"
+                  >Ciclo de estudios a financiar*</label
+                >
+                <select
+                  class="form-select"
+                  id="cicloAContinuar"
+                  name="cicloAContinuar"
+                  aria-label="seleccione ciclo"
+                >
+                  <option value="">Seleccione</option>
+                  <option value="4 ciclo">4 ciclo</option>
+                  <option value="5 ciclo">5 ciclo</option>
+                  <option value="6 ciclo">6 ciclo</option>
+                  <option value="7 ciclo">7 ciclo</option>
+                  <option value="8 ciclo">8 ciclo</option>
+                  <option value="9 ciclo">9 ciclo</option>
+                  <option value="10 ciclo">10 ciclo</option>
+                </select>
+              </div>
+
+              <div class="mb-2">
+                <label for="comoSeEntero" class="form-label form-label--xs"
+                  >¿Cómo se entero del programa?*</label
+                >
+                <select
+                  class="form-select"
+                  id="comoSeEntero"
+                  name="comoSeEntero"
+                  aria-label="seleccione ciclo"
+                >
+                  <option value="">Seleccione</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="Referencia (familia o amigos)">
+                    Referencia (familia o amigos)
+                  </option>
+                  <option value="Instituto">Instituto</option>
+                  <option value="Universidad">Universidad</option>
+                  <option value="Página web">Página web</option>
+                  <option value="otros">Otros</option>
+                </select>
+              </div>
+              <div class="mb-2" id="showOtro">
+                <label for="otros" class="form-label form-label--xs"
+                  >Indique el medio*</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="otros"
+                  name="otros"
+                  placeholder="Indique el medio"
+                />
+              </div>
+              <div class="mb-2 d-flex gap-3 align-items-center">
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input"
+                    role="switch"
+                    type="checkbox"
+                    name="terminos"
+                  />
+                </div>
+                <div>
+                  <p class="formgroup__terms">
+                    Si, he leído y presto mi consentimiento a los
+                    <a class="showmodalTerms"
+                      >Términos y condiciones del Programa de créditos
+                      educativos Continuidad de Estudios</a
+                    >
+                    y al procesamiento, al tratamiento y a la transferencia de
+                    mis datos personales conforme a lo dispuesto en la
+                    <a class="showModalPolitics"
+                      >Política de tratamiento de datos personales del Programa
+                      de créditos educativos Continuidad de Estudios</a
+                    >.
+                  </p>
+                </div>
+              </div>
+              <div class="row d-flex mb-3 mt-3">
+                <button type="submit" class="btn-submit btn-submit--hover">
+                  REGISTRARME
+                </button>
               </div>
             </div>
-            <div class="row d-flex mb-3 mt-3">
-              <button type="submit" class="btn-submit btn-submit--hover">
-                REGISTRARME
-              </button>
+            <div class="msg-reject" id="reject">
+              <img
+                src="img/SVG/info-svg.svg"
+                class="mb-2 text-center"
+                alt="info"
+                width="50"
+              />
+              <p>
+                ¡Gracias por tu interés en el Programa de Créditos Educativos!
+                Lamentablemente, tu edad no se encuentra dentro del rango
+                permitido (entre 18 a 25 años cumplidos). ¿Conoces a alguien qué
+                si es elegible? ¡Invitálo a postular!
+              </p>
             </div>
           </form>
         </div>

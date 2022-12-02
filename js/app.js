@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  initAllowReject();
   initSurvey();
   initDatePicker();
 
@@ -76,6 +77,10 @@ const initSurvey = () => {
     }
   });
 };
+const initAllowReject = () => {
+  $("#show-allow").hide();
+  $("#reject").hide();
+};
 
 const initDatePicker = () => {
   $("#fNacimiento").datepicker({
@@ -123,6 +128,28 @@ const initDatePicker = () => {
       "Noviembre",
       "Deciembre",
     ],
+    onSelect: function () {
+      let date = $(this).datepicker("getDate");
+      const dateFormatISO = new Date(date).toISOString();
+      const arrayDate = dateFormatISO.split("T")[0].split("-");
+      const currentDate = new Date();
+      let edad = currentDate.getFullYear() - +arrayDate[0];
+      const month = currentDate.getMonth() + 1 - arrayDate[1];
+
+      if (month < 0 || (month === 0 && currentDate.getDate() < arrayDate[2])) {
+        --edad;
+      }
+      console.log(edad);
+
+      if (edad < 18 || edad > 25) {
+        $("#show-allow").hide();
+        $("#reject").show("slow");
+        return;
+      }
+
+      $("#reject").hide("slow");
+      $("#show-allow").show("slow");
+    },
   });
 };
 
@@ -131,8 +158,11 @@ const initRules = () => {
     nombres: {
       required: true,
     },
-    edad: {
+    dni: {
       required: true,
+      number: true,
+      minlength: 8,
+      maxlength: 8,
     },
     fNacimiento: {
       required: true,
@@ -156,10 +186,6 @@ const initRules = () => {
     cicloAContinuar: {
       required: true,
     },
-    monto: {
-      required: true,
-      number: true,
-    },
     comoSeEntero: {
       required: true,
     },
@@ -182,44 +208,44 @@ const initRules = () => {
 };
 
 const initMessages = () => {
+  const CAMPO_REQUERIDO = "Campo requerido";
   const MESSAGES = {
     nombres: {
-      required: "Campo requerido",
+      required: CAMPO_REQUERIDO,
     },
-    edad: {
-      required: "Campo requerido",
+    dni: {
+      required: CAMPO_REQUERIDO,
+      number: "Solo digitos númericos",
+      minlength: "Mínimo 8 digitos",
+      maxlength: "Máximo 8 digitos",
     },
     fNacimiento: {
-      required: "Campo requerido",
+      required: CAMPO_REQUERIDO,
     },
     email: {
-      required: "Campo requerido",
+      required: CAMPO_REQUERIDO,
       email: "Formato correo invalido",
     },
     tieneCreditoAnterior: {
-      required: "Campo requerido",
+      required: CAMPO_REQUERIDO,
     },
     nivelAcademico: {
-      required: "Campo requerido",
+      required: CAMPO_REQUERIDO,
     },
     institucionEducativa: {
-      required: "Campo requerido",
+      required: CAMPO_REQUERIDO,
     },
     carrera: {
-      required: "Campo requerido",
+      required: CAMPO_REQUERIDO,
     },
     cicloAContinuar: {
-      required: "Campo requerido",
-    },
-    monto: {
-      required: "Campo requerido",
-      number: "solo números",
+      required: CAMPO_REQUERIDO,
     },
     comoSeEntero: {
-      required: "Campo requerido",
+      required: CAMPO_REQUERIDO,
     },
     otros: {
-      required: "Campo requerido",
+      required: CAMPO_REQUERIDO,
     },
     terminos: {
       required: "Requerido",

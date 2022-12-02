@@ -10,7 +10,8 @@ const TERMINOSCONDICIONES = `
             <li>Ser de nacionalidad peruana y residente permanente.</li>
             <li>Tener una edad entre los dieciocho (18) y veinticinco (25) años cumplidos a la fecha en la que apliquen al Programa de Créditos Educativos “Continuidad de Estudios”.</li>
             <li>Encontrarse a mitad de carrera universitaria o técnica en adelante.</li>
-            <li>Los postulantes deben presentar excelencia académica presentando récord de notas o documento análogo, que acrediten de manera fehaciente que en los últimos dos (2) ciclos obtuvieron un promedio ponderado mayor o igual a 13.00/20 ciclos y que por problemas económicos solo hayan dejado de estudiar máximo un (1) ciclo de estudio.</li>
+            <li>Los postulantes deben presentar excelencia académica presentando récord de notas o documento análogo, que acrediten de manera fehaciente que en los últimos dos (2) ciclos obtuvieron un promedio ponderado mayor o igual a 13/20.</li>
+            <li>Haber dejado de estudiar máximo un (1) ciclo de estudio por problemas económicos.</li>
             <li>No presentar deuda vencida con la institución educativa.</li>
             <li>No tener antecedentes penales, policiales o judiciales, por parte del estudiante, responsable del pago y aval del crédito educativo.</li>
             <li>Presentar un buen registro histórico en la central de riesgo, por parte del estudiante, responsable del pago y aval del crédito educativo.</li>

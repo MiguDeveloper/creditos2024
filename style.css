@@ -88,7 +88,7 @@ img {
   opacity: 1;
 }
 .btn-submit--hover:after {
-  content: "🚀";
+  content: "🎓";
   position: absolute;
   opacity: 0;
   top: 6px;
@@ -116,6 +116,22 @@ select.form-select {
 .formgroup__terms a {
   color: var(--color-secondary);
   cursor: pointer;
+}
+
+.msg-reject {
+  border-left: 11px solid #f8485e;
+  padding: 1em calc(1.5em + 0.5vw);
+  color: #424242;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 1.05em;
+  line-height: 1.65em;
+  letter-spacing: 0;
+  border-radius: 11px;
+  background: linear-gradient(to bottom right, rgba(245, 242, 240, 0.8901960784) 0, #fff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content-right {
