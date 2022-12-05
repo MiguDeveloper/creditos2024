@@ -24,7 +24,8 @@ $(document).ready(function () {
       console.log(data);
       Swal.fire({
         icon: "success",
-        text: "Se envió con éxito la información, gracias",
+        title: "¡Te registraste con éxito!",
+        text: "En un plazo de 48 horas te enviaremos un correo de confirmación con los requisitos del programa.",
         confirmButtonText: "Listo!",
         customClass: {
           confirmButton: "btn-submit btn-submit--confirm",
