@@ -161,6 +161,12 @@ const initRules = () => {
     nombres: {
       required: true,
     },
+    apePaterno: {
+      required: true,
+    },
+    apeMaterno: {
+      required: true,
+    },
     dni: {
       required: true,
       number: true,
@@ -217,6 +223,12 @@ const initMessages = () => {
   const CAMPO_REQUERIDO = "Campo requerido";
   const MESSAGES = {
     nombres: {
+      required: CAMPO_REQUERIDO,
+    },
+    apePaterno: {
+      required: CAMPO_REQUERIDO,
+    },
+    apeMaterno: {
       required: CAMPO_REQUERIDO,
     },
     dni: {
