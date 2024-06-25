@@ -39,6 +39,22 @@ $(document).ready(function () {
       }
 
       console.log('envio');
+
+      Swal.fire({
+        icon: 'success',
+        title: '¡Te registraste con éxito!',
+        text: 'En un plazo de 48 horas te enviaremos un correo de confirmación con los requisitos del programa.',
+        confirmButtonText: 'LISTO!',
+        customClass: {
+          confirmButton: 'btn-submit btn-submit--modales',
+        },
+        buttonsStyling: false,
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.reload();
+        }
+      });
+
       //$.ajax({
       //    url: '/PreRegistro/RegisterForm',
       //    data: {
