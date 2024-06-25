@@ -4,7 +4,6 @@ $(document).ready(function () {
   initSurvey();
   initDatePicker();
   initNivelAcademico();
-  changeNivelAcademico();
 
   $.validator.addMethod(
     'emailfull',
@@ -23,18 +22,77 @@ $(document).ready(function () {
     messages: initMessages(),
     submitHandler: function (form, event) {
       event.preventDefault();
-      const data = $('#frmRegistro').serializeArray();
-      console.log(data);
-      Swal.fire({
-        icon: 'success',
-        title: '¡Te registraste con éxito!',
-        text: 'En un plazo de 48 horas te enviaremos un correo de confirmación con los requisitos del programa.',
-        confirmButtonText: 'Listo!',
-        customClass: {
-          confirmButton: 'btn-submit btn-submit--confirm',
-        },
-        buttonsStyling: false,
-      });
+      var _vNumDoc = $('#dni').val();
+      var _vTipoColaborador = $('#nivelAcademico').val();
+      var _vNombres = $('#nombres').val();
+      var _vApellidos = $('#apellidos').val();
+      var _vEmail = $('#email').val();
+      var _vCarrera = $('#carrera').val();
+      var _vUniversidad = $('#institucionEducativa').val();
+      var _vSurvey = $('#comoSeEntero').val();
+      var _dFechaNacimiento = $('#fNacimiento').val();
+      var _vUltimoSemestre = $('#cicloAContinuar').val();
+      var _nIdeEmpresa = $('#nIdeEmpresa').val();
+      var _celular = $('#celular').val();
+      if (_vSurvey == 'otros') {
+        _vSurvey = '[O]' + $('#otros').val();
+      }
+
+      console.log('envio');
+      //$.ajax({
+      //    url: '/PreRegistro/RegisterForm',
+      //    data: {
+      //        vNumDoc 		:_vNumDoc,
+      //        vTipoColaborador:_vTipoColaborador,
+      //        vNombres 		:_vNombres,
+      //        vApellidos     :_vApellidos,
+      //        vEmail 			:_vEmail,
+      //        vCarrera 		:_vCarrera,
+      //        vUniversidad 	:_vUniversidad,
+      //        vSurvey 		:_vSurvey,
+      //        dFechaNacimiento:_dFechaNacimiento,
+      //        bTerminos 		:true,
+      //        nIdeEmpresa 	:_nIdeEmpresa,
+      //        nIdeConvo       :0,
+      //        vUltimoSemestre :_vUltimoSemestre,
+      //        vTelefono        :_celular,
+      //        hijoArray       :''
+      //    },
+      //    type:'POST',
+      //    success: function(data){
+      //        if (data.ok) {
+      //            Swal.fire({
+      //                icon: 'success',
+      //                title: '¡Te registraste con éxito!',
+      //                text: 'En un plazo de 48 horas te enviaremos un correo de confirmación con los requisitos del programa.',
+      //                confirmButtonText: 'Listo!',
+      //                customClass: {
+      //                    confirmButton: 'btn-submit btn-submit--confirm',
+      //                },
+      //                buttonsStyling: false,
+      //                isConfirmed: function(value){
+      //                    alert('presiono' + value );
+      //                }
+      //            }).then((result) => {
+      //                if (result.isConfirmed) {
+      //                     location.reload();
+      //        }
+      //    });
+      //        }
+      //    else{
+      //                        Swal.fire({
+      //        icon: "error",
+      //    title: "¡Algo salió mal!",
+      //    text: data.message,
+      //    confirmButtonText: "Ok!",
+      //    customClass: {
+      //        confirmButton: "btn-submit btn-submit--confirm",
+      //        },
+      //    buttonsStyling: false,
+      //    });
+      //}
+      //}
+      //});
     },
     invalidHandler: function (event, validator) {
       console.log('fomulario invalido: campos requeridos');
@@ -46,10 +104,10 @@ $(document).ready(function () {
     Swal.fire({
       title: TITULO_TERMINOS,
       html: TERMINOSCONDICIONES,
-      confirmButtonText: 'Aceptar',
+      confirmButtonText: 'ACEPTAR',
       customClass: {
         title: 'title--color-secondary',
-        confirmButton: 'btn-submit btn-submit--confirm',
+        confirmButton: 'btn-submit btn-submit--modales',
       },
       buttonsStyling: false,
     });
@@ -59,10 +117,10 @@ $(document).ready(function () {
     Swal.fire({
       title: TITULO_POLITICAS,
       html: POLITICASDATOS,
-      confirmButtonText: 'Aceptar',
+      confirmButtonText: 'ACEPTAR',
       customClass: {
         title: 'title--color-secondary',
-        confirmButton: 'btn-submit btn-submit--confirm',
+        confirmButton: 'btn-submit btn-submit--modales',
       },
       buttonsStyling: false,
     });
@@ -85,16 +143,20 @@ const initAllowReject = () => {
   $('#show-allow').hide();
   $('#reject').hide();
 };
-
 const initWelcomeMessages = () => {
   Swal.fire({
     title: '¡Bienvenido Estudiante!',
     icon: 'info',
+    focusConfirm: false,
     text: 'Nos alegra que estes aquí. Esperamos el registro de tus datos y continues con el proceso de postulación',
-    confirmButtonText: 'Aceptar',
+    confirmButtonText: 'ACEPTAR',
+    customClass: {
+      title: 'title--color-secondary',
+      confirmButton: 'btn-submit btn-submit--modales',
+    },
+    buttonsStyling: false,
   });
 };
-
 const initDatePicker = () => {
   $('#fNacimiento').datepicker({
     dateFormat: 'dd/mm/yy',
@@ -154,12 +216,12 @@ const initDatePicker = () => {
       }
       console.log(edad);
 
-      if (edad < 18 || edad > 25) {
+      if (edad < 18 || edad > 35) {
         $('#show-allow').hide();
         $('#reject').show('slow');
         return;
       }
-
+      console.log('paso el IF');
       $('#reject').hide('slow');
       $('#show-allow').show('slow');
     },
@@ -171,10 +233,7 @@ const initRules = () => {
     nombres: {
       required: true,
     },
-    apePaterno: {
-      required: true,
-    },
-    apeMaterno: {
+    apellidos: {
       required: true,
     },
     dni: {
@@ -186,7 +245,9 @@ const initRules = () => {
     fNacimiento: {
       required: true,
     },
-    sexo: {
+    celular: {
+      number: true,
+      minlength: 9,
       required: true,
     },
     email: {
@@ -235,10 +296,7 @@ const initMessages = () => {
     nombres: {
       required: CAMPO_REQUERIDO,
     },
-    apePaterno: {
-      required: CAMPO_REQUERIDO,
-    },
-    apeMaterno: {
+    apellidos: {
       required: CAMPO_REQUERIDO,
     },
     dni: {
@@ -250,8 +308,10 @@ const initMessages = () => {
     fNacimiento: {
       required: CAMPO_REQUERIDO,
     },
-    sexo: {
+    celular: {
       required: CAMPO_REQUERIDO,
+      number: 'Solo digitos númericos',
+      minlength: 'Mínimo 9 digitos',
     },
     email: {
       required: CAMPO_REQUERIDO,
@@ -291,28 +351,5 @@ const initNivelAcademico = () => {
     $('#nivelAcademico').append(
       `<option value="${nivel.value}">${nivel.value}</option>`
     );
-  });
-};
-
-const changeNivelAcademico = () => {
-  $('#nivelAcademico').change(function () {
-    const NIVEL = this.value;
-    addOption(NIVEL);
-  });
-};
-
-const addOption = (nivel = '') => {
-  $('#cicloAContinuar')
-    .find('option')
-    .remove()
-    .end()
-    .append(`<option value="">Seleccione</option>`);
-
-  ciclos.forEach((ciclo) => {
-    if (ciclo.nivel === nivel) {
-      $('#cicloAContinuar').append(
-        `<option value="${ciclo.value}">${ciclo.value}</option>`
-      );
-    }
   });
 };
