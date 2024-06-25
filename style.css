@@ -2,23 +2,23 @@
 
 @font-face {
   font-family: 'Duplet-regular';
-  src: url('fonts/Duplet-Regular.otf') format ('opentype');
+  src: url('fonts/Duplet-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Duplet-bold';
-  src: url('fonts/Duplet-Bold.otf') format ('opentype');
+  src: url('./fonts/Duplet-Bold.ttf') format('truetype');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'dupletsemibold';
-  src: url('fonts/Duplet-Semibold.otf') format ('opentype');
+  src: url('fonts/Duplet-Semibold.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Sixcaps';
-  src: url('fonts/SixCaps-Regular.ttf') format ('truetype');
+  src: url('fonts/SixCaps-Regular.ttf') format('truetype');
 }
 
 :root {
@@ -33,7 +33,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Karla', Sans-serif;
+  font-family: 'Duplet-regular', Sans-serif;
 }
 
 ul,
@@ -355,5 +355,5 @@ select.form-select {
 }
 
 .form-label {
-  font-family: 'Karla', Sans-serif !important;
+  font-family: 'Duplet-regular', Sans-serif !important;
 }
