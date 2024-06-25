@@ -183,6 +183,7 @@ img {
 
 .btn-submit--modales {
   padding: 0.4rem 1.5rem;
+  outline: none;
 }
 
 select.form-select {
