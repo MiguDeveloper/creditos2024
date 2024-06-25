@@ -43,7 +43,7 @@ $(document).ready(function () {
       Swal.fire({
         icon: 'success',
         title: '¡Te registraste con éxito!',
-        text: 'En un plazo de 48 horas te enviaremos un correo de confirmación con los requisitos del programa.',
+        text: 'Dentro de las próximas 24 horas uno de nuestros asesores te contactará para brindarte toda la información que necesitas.',
         confirmButtonText: 'LISTO!',
         customClass: {
           confirmButton: 'btn-submit btn-submit--modales',

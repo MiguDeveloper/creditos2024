@@ -165,29 +165,36 @@ electrónico <a href="mailto:creditos@escalo.pe">creditos@escalo.pe</a></p>
     
     <li>COOKIES
         <br>
-        La Página Web utiliza cookies, estrictamente necesarias y esenciales para que se utilice la Página Web y se
-        permita un libre movimiento, utilizar áreas seguras u opciones personalizadas. Asimismo, las cookies se utilizan
-        para analizar la experiencia de los usuarios de Internet y poder brindarles mejores servicios y mostrar
-        contenido personalizado. Intercorp utilizará cookies para realizar análisis estadísticos sobre el número de
-        visitantes de la Página Web y otros estudios sobre la utilización de los servicios. Intercorp también utilizará
-        cookies para poder gestionar la experiencia del visitante en la Página Web, con la finalidad de mejorar su
+        La Página Web utiliza cookies, estrictamente necesarias y esenciales para
+        que se utilice la Página Web y se permita un libre movimiento, utilizar
+        áreas seguras u opciones personalizadas. Asimismo, las cookies se utilizan
+        para analizar la experiencia de los usuarios de Internet y poder
+        brindarles mejores servicios y mostrar contenido personalizado. Escalo
+        utilizará cookies para realizar análisis estadísticos sobre el número de
+        visitantes de la Página Web y otros estudios sobre la utilización de los
+        servicios. Escalo también utilizará cookies para poder gestionar la
+        experiencia del visitante en la Página Web, con la finalidad de mejorar su
         experiencia de navegación y mejorar sus servicios
     </li>
     
     <li>MODIFICACIONES DE LA POLÍTICA DE PRIVACIDAD
         <br>
         <br>
-        Escalo se reserva expresamente el derecho a modificar, actualizar o completar en cualquier momento las presentes
-        condiciones de tratamiento de datos. Cualquier modificación, actualización o ampliación producida en las
-        condiciones de tratamiento de datos será inmediatamente comunicada al usuario y publicada en la Página Web, por
-        lo cual el titular del dato estará enterado de qué información se recopila, cómo y bajo qué circunstancias
-        Intercorp utiliza y trata su información.
+        Escalo se reserva expresamente el derecho a modificar, actualizar o
+        completar en cualquier momento las presentes condiciones de tratamiento de
+        datos. Cualquier modificación, actualización o ampliación producida en las
+        condiciones de tratamiento de datos será inmediatamente comunicada al
+        usuario y publicada en la Página Web, por lo cual el titular del dato
+        estará enterado de qué información se recopila, cómo y bajo qué
+        circunstancias Escalo utiliza y trata su información.
         <br>
         <br>
-        En ese sentido, acepto y estoy de acuerdo con todos los términos señalados y de manera expresa autorizo al
-        Programa de Créditos Educativos de Escalo al tratamiento de mis datos personales con los alcances señalados
-        anteriormente. Asimismo, autorizo anticipadamente a Escalo poder recabar mi información personal, modificarla
-        y/o actualizarla de ser el caso para efectos de la postulación y/o ejecución del Programa de Créditos
+        En ese sentido, acepto y estoy de acuerdo con todos los términos señalados
+        y de manera expresa autorizo al Programa de Créditos Educativos de Escalo
+        al tratamiento de mis datos personales con los alcances señalados
+        anteriormente. Asimismo, autorizo anticipadamente a Escalo poder recabar
+        mi información personal, modificarla y/o actualizarla de ser el caso para
+        efectos de la postulación y/o ejecución del Programa de Créditos
         Educativos.
     </li>
 </ul>
