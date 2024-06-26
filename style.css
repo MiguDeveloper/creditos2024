@@ -84,11 +84,20 @@ body {
   margin-bottom: 2rem;
 }
 
-.text-bg {
-  background: black;
-  color: white;
-  font-size: 2rem;
-  padding: 0.2rem 0.95rem;
+.bb-bold {
+    border-bottom: 5px solid #000000;
+    padding-bottom: 2px;
+    font-size: 1.25rem;
+    line-height:1.25rem;
+}
+
+.bb-bold--bottom {
+    margin-top: 5px;
+}
+
+.bb-bold--top {
+    margin-bottom: 5px;
+    padding-left: 2px;
 }
 
 .font-sixcap {
@@ -240,13 +249,13 @@ select.form-select {
 
 #arrowDown {
   position: absolute;
-  bottom: 39px;
+  bottom: calc(100vh - 90%);
   left: 50%;
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 4px solid #fff;
-  border-bottom: 4px solid #fff;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb04 2s infinite;
