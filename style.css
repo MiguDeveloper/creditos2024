@@ -92,7 +92,7 @@ body {
 }
 
 .font-sixcap {
-  font-family: 'Six Caps', sans-serif;
+  font-family: 'Sixcaps', sans-serif;
 }
 
 @media (width > 992px) {
@@ -142,7 +142,7 @@ img {
   background-color: black;
   padding: 7px;
   transition: 0.5s;
-  font-family: 'Six Caps', sans-serif;
+  font-family: 'Sixcaps', sans-serif;
   font-size: 1.5rem;
   line-height: 1.5rem;
 }
