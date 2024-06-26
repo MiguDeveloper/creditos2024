@@ -164,7 +164,7 @@ const initWelcomeMessages = () => {
     title: '¡Bienvenido Estudiante!',
     icon: 'info',
     focusConfirm: false,
-    text: 'Nos alegra que estes aquí. Esperamos el registro de tus datos y continues con el proceso de postulación',
+    text: 'Nos alegra que estes aquí. Esperamos tu registro y que continúes con el proceso de postulación.',
     confirmButtonText: 'ACEPTAR',
     customClass: {
       title: 'title--color-secondary',
